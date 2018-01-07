@@ -1,0 +1,282 @@
+// Variables
+//------------------------------------------------------
+$form-normal:                  $white !default;
+$form-default:                 $normal-color !default;
+$form-primary:                 $primary-color !default;
+$form-success:                 $success-color !default;
+$form-info:                    $info-color !default;
+$form-warning:                 $warning-color !default;
+$form-danger:                  $danger-color !default;
+
+$message-success:                  $grass-dark !default;
+$message-danger:                   $grapefruit-dark !default;
+$message-warning:                  $sunflower-dark !default;
+
+$form-font-color:                  $darkgray-dark !default;
+$form-placeholder-font-color:      #cacaca !default;
+
+$form-disabled-color:              $lightgray-dark !default;
+
+$search-query-value:               17px !default;
+
+$search-icon-width:                30px !default;
+$search-icon-line-height:          30px !default;
+
+$form-inner-shadow:                inset 0 -7px 8px rgba(0, 0, 0, .02) !default;
+$form-outer-shadow:                0 1px 2px rgba(0, 0, 0, .07) !default;
+
+// Exports
+//------------------------------------------------------
+
+@include exports("form") {
+
+  /**
+   * form
+   * --------------------------------------------------
+   */
+  .form-control {
+      padding: 1.5rem;
+      min-height: 50px;
+      margin-bottom: 3rem;
+      border-radius: 0;
+      color: $form-font-color;
+      border-color: rgba(0,0,0,0.1);
+      border-bottom-width: 2px;
+      background-color: $form-normal;
+      @include box-shadow($value: none);
+      @include transition(all 0.15s ease-in-out);
+
+      &:hover { 
+        border-color: rgba(0,0,0,0.15);
+        @include box-shadow($value: $form-inner-shadow);
+      }
+
+      &:active { @include box-shadow($value: $form-inner-shadow); }
+
+      &:focus {
+        border-color: rgba(0,0,0,0.15);
+        @include box-shadow($value: $form-inner-shadow);
+      }
+
+      &.disabled, 
+      &[disabled] {
+          border-color: $form-disabled-color;
+          background-color: $form-disabled-color;
+      }
+
+  }
+
+  .form-control::-webkit-input-placeholder { color: $form-placeholder-font-color !important; }
+  .form-control:-moz-placeholder { color: $form-placeholder-font-color !important; }
+  .form-control::-moz-placeholder { color: $form-placeholder-font-color !important; }
+  .form-control:-ms-input-placeholder { color: $form-placeholder-font-color !important; }
+
+  // Newsletter
+  @at-root #newsletter {
+    .btn-newsletter.inside {
+      margin-left: 0 !important;
+      margin-left: -108px !important;
+      z-index: 999;
+    }
+    .form-control { margin-bottom: 2rem; }
+  }
+
+  // Submit Button
+  .btn-form-submit {
+    width: 100%;
+    padding: 1.2rem 2.5rem;
+  }
+
+  // Textarea
+  textarea.form-control {
+    max-width: 100%;
+    min-height: 130px !important;
+    max-height: 211px;
+  }
+
+  // Login / Register Forms
+  #login-form,
+  #register-form {
+    width: 100%;
+    background: $white;
+    border: 1px solid rgba(0,0,0,.1);
+    padding: 3rem;
+    
+    & .btn-log {
+      margin-bottom: 3rem;
+    }
+  }
+  .log-line {
+    padding: 0 0 3.5rem 0;
+    margin-bottom: 3rem;
+
+    & .checkbox,
+    & .radio {
+      margin-left: 2rem;
+    }
+  }
+
+  .input-group, .form-group {
+    input { font: normal normal 200 1.4rem/1 FontAwesome, "Roboto", sans-serif; }
+  }
+
+  .input-group-btn {
+    vertical-align: top;
+      & .btn {
+        min-height: 50px;
+        // margin-top: -2rem;
+      }
+      & .btn + .btn {
+          border-width: 1px;
+          border-style: solid;
+          border-color: darken($form-normal, 7%);
+      }
+      & .btn + .btn.btn-default {
+          border-color: darken($form-default, 7%);
+      }
+      & .btn + .btn.btn-primary {
+          border-color: darken($form-primary, 7%);
+      }
+      & .btn + .btn.btn-info {
+          border-color: darken($form-info, 7%);
+      }
+      & .btn + .btn.btn-success {
+          border-color: darken($form-success, 7%);
+      }
+      & .btn + .btn.btn-warning {
+          border-color: darken($form-warning, 7%);
+      }
+      & .btn + .btn.btn-danger {
+          border-color: darken($form-danger, 7%);
+      }
+  }
+
+  .input-group-addon {
+      background-color: $form-normal;
+      border-color: darken($form-normal, 7%);
+      color: $form-default;
+
+      & .radio,
+      & .checkbox {
+          margin: -3px 0 -4px !important;
+      }
+  }
+
+  .form-search {
+      & .search-query,
+      & .search-query:first-child,
+      & .search-query:last-child {
+          padding: 0 $search-query-value;
+          @include radius($type: border-radius, $value: $search-query-value);
+      }
+      @at-root .input-group .form-control:last-child {
+          // padding: 0 $search-query-value 0 10px;
+          @include radius($type: border-top-left-radius, $value: 0);
+          @include radius($type: border-bottom-left-radius, $value: 0);
+      }
+      @at-root .input-group .form-control:first-child {
+          @include radius($type: border-top-right-radius, $value: 0);
+          @include radius($type: border-bottom-right-radius, $value: 0);
+      }
+      & .btn {
+          @include radius($type: border-radius, $value: $search-query-value);  
+      }
+  }
+
+  .search-only {
+      position: relative;
+      & .search-icon {
+          position: absolute;
+          top: 2px;
+          left: $search-query-value / 2;
+          width: $search-icon-width;
+          line-height: $search-icon-line-height;
+          text-align: center;
+          font-size: $search-query-value;
+          color: $form-placeholder-font-color;
+          z-index: 20;
+      }
+      & .form-control:last-child {
+         padding-left: $search-icon-width + 10;
+      }
+  }
+
+  .has-success {
+      & .help-block,
+      & .control-label,
+      & .radio,
+      & .checkbox,
+      & .radio-inline,
+      & .checkbox-inline {
+          color: $message-success;
+      }
+      & .form-control {
+          border-color: $message-success;
+          @include box-shadow($value: none);
+      }
+      & .form-control:focus {
+          border-color: $message-success;
+          @include box-shadow($value: none);
+      }
+      & .input-group-addon {
+          background-color: $message-success;
+          border-color: $message-success;
+      }
+      & .form-control-feedback {
+          color: $message-success;
+      }    
+  }
+  .has-warning {
+      & .help-block,
+      & .control-label,
+      & .radio,
+      & .checkbox,
+      & .radio-inline,
+      & .checkbox-inline {
+          color: $message-warning;
+      }
+      & .form-control {
+          border-color: $message-warning;
+          @include box-shadow($value: none);
+      }
+      & .form-control:focus {
+          border-color: $message-warning;
+          @include box-shadow($value: none);
+      }
+      & .input-group-addon {
+          background-color: $message-warning;
+          border-color: $message-warning;
+      }
+      & .form-control-feedback {
+          color: $message-warning;
+      }
+  }
+  .has-error {
+      & .help-block,
+      & .control-label,
+      & .radio,
+      & .checkbox,
+      & .radio-inline,
+      & .checkbox-inline {
+          color:  $message-danger;
+      }
+      & .form-control {
+          border-color:  $message-danger;
+          @include box-shadow($value: none);
+      }
+      & .form-control:focus {
+          border-color:  $message-danger;
+          @include box-shadow($value: none);
+      }
+      & .input-group-addon {
+          background-color:  $message-danger;
+          border-color:  $message-danger;
+      }
+      & .form-control-feedback {
+          color:  $message-danger;
+      }
+  }
+
+}
+
+

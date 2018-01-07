@@ -1,0 +1,106 @@
+// Variables
+//------------------------------------------------------
+$button-normal:                  $lavender-light !default;
+$button-default:                 $normal-color !default;
+$slider-primary:                 $primary-color !default;
+$button-success:                 $success-color !default;
+$button-info:                    $info-color !default;
+$button-warning:                 $warning-color !default;
+$button-danger:                  $danger-color !default;
+
+
+
+// Exports
+//------------------------------------------------------
+@include exports("slider") {
+    .carousel.slide {
+
+        &#light-slider { 
+            color: #333;
+
+            & h1, & h2, & h3, & h4, & h5, & h6 { text-shadow: none;color: #333; }
+        }
+        
+        // Light & Dark Slider
+        &#dark-slider,
+        &#light-slider {
+            & .item {
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                background-size: cover;
+                background-position: contain;
+                min-height: 560px;
+                height: auto;
+
+                @media only screen and (max-width: 767px) { min-height: 380px; }
+                @media only screen and (max-width: 991px) { min-height: 460px; }
+
+            }
+
+            & .brand { font-size: 120%; }
+        }
+
+        & .carousel-caption {
+            @media only screen and (min-width: 347px) { bottom: -15px !important; }
+            @media only screen and (min-width: 747px) { bottom: -10px !important; }
+            @media only screen and (min-width: 941px) { bottom: 5px !important; }
+        }
+
+        & .carousel-control {
+            background-image: none !important;
+
+            @include transition(all 0.095s ease-in);
+            //opacity: 1 !important;
+            //&:hover i { color: #fff; }
+            &.left:hover i { @include translate-x(-10px); }
+            &.right:hover i { @include translate-x(10px); }
+
+            @media only screen and (max-width: 767px) {
+                &.left:hover i { @include translate-x(-5px); }
+                &.right:hover i { @include translate-x(5px); }
+            }
+
+            & i {
+                position: absolute;top: 45%;
+                font-size: 200% !important;
+                text-shadow: none;
+                @include transition(all 0.095s ease-in);
+
+                @media only screen and (max-width: 767px) { font-size: 120% !important; }
+
+                &.fa-chevron-right { right: 15%; }
+                &.fa-chevron-left { left: 15%; }
+            }
+        }
+
+        &#light-slider .carousel-control i { color: #888; }
+        &#dark-slider .carousel-control i { color: #fff; }
+
+        & .slider-content {
+            padding: 19% 0;
+
+            & .btn { margin: 15px; }
+        }
+    } // <-- end .carusel.slide
+
+    // Owl !
+    .owl-pagination {
+
+        // Active
+        & .owl-page.active span {
+            background-color: #fff !important;
+            box-shadow: 0px 1px 2px 1px rgba(205, 220, 57, 0.26);
+            border-color: $slider-primary;
+            border-width: 1px;
+            @include transform(rotate(45deg));
+        }
+
+        // Others
+        & .owl-page span {
+            @include transition(all 0.095s ease-in);
+            border-radius: 0px !important;
+            border: solid 3px rgba(0,0,0,.4);
+            background-color: #fff !important;
+        }
+    }
+}

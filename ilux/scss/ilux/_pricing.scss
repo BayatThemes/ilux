@@ -1,0 +1,150 @@
+// Variables
+//------------------------------------------------------
+$pricing-normal:                  $lavender-light !default;
+$pricing-default:                 $normal-color !default;
+$pricing-primary:                 $primary-color !default;
+$pricing-success:                 $success-color !default;
+$pricing-info:                    $info-color !default;
+$pricing-warning:                 $warning-color !default;
+$pricing-danger:                  $danger-color !default;
+
+$pricing-background-color:        $lightgray-light !default;
+$pricing-shadow:                  0 1px 2px rgba(0, 0, 0, .2) !default;
+$pricing-shadow-active:           0 0 8px rgba(0, 0, 0, .6) !default;
+$pricing-radius:                  4px !default;
+
+
+
+
+// Exports
+//------------------------------------------------------
+
+@include exports("pricing") {
+
+  /**
+   * Pricing Tables
+   * --------------------------------------------------
+   */
+  .pricing-table {
+  	background-color: $pricing-background-color;
+  	text-align: center;
+  	overflow: auto;
+  	margin-bottom: 30px;
+  	@include transition(all 0.095s ease-in);
+
+  	@media (max-width: 767px) { max-width: 80%;margin: 30px auto; }
+  	@media (max-width: 480px) { min-width: 100%;margin: 15px auto; }
+
+  	// Hover
+  	&:not(.featured):hover {
+  		box-shadow: 0 1px 5px 1px rgba(0,0,0,.03);
+  	}
+
+  	// Title
+  	& .pricing-table-title {
+  		padding: 15px;
+  		border-bottom: solid 1px rgba(0,0,0,.04);
+  	}
+
+  	// Price
+  	& .pricing-table-price {
+  		padding: 15px;
+  		position: relative;
+
+  		& .pricing-price { 
+  			font-weight: bold;
+  			font-size: 400%;
+  			margin: 0;
+  		}
+
+  		& .pricing-period { margin: 0; }
+
+  		& .pricing-currency {
+  			position: absolute;
+  			margin: 20px 0 0 -10px;
+  		}
+  	}
+
+  	// Content
+  	& .pricing-table-content {
+  		& ul {
+  			list-style-type: none;
+  			margin-bottom: 15px;
+
+  			& li {
+  				padding: 10px;
+  				margin-bottom: 0;
+  				@include transition(all 0.095s ease-in);
+
+  				&:hover { background-color: lighten($pricing-background-color, 3%) }
+  			}
+  		}
+
+  		& .pricing-table-button {
+  			padding: 15px 0 30px;
+  			background-color: $pricing-background-color;
+			background-image: -webkit-linear-gradient(top left, lighten($pricing-background-color, 0%), lighten($pricing-background-color, 0%), darken($pricing-background-color, 5%));
+			background-image: -o-linear-gradient(top left, lighten($pricing-background-color, 0%), lighten($pricing-background-color, 0%), darken($pricing-background-color, 5%));
+			background-image: linear-gradient(to bottom right, lighten($pricing-background-color, 0%), lighten($pricing-background-color, 0%), darken($pricing-background-color, 5%));
+			background-position: -1px 0px;
+			background-size: 110%;
+  		}
+  	}
+
+  	// Featured
+  	&.featured {
+  		box-shadow: 0px 1px 2px 1px lighten($pricing-primary, 30%);
+  		border: solid 1px $pricing-primary;
+  	}
+
+	// Colors
+  	&.featured.pricing-normal { box-shadow: 0px 1px 2px 1px lighten($pricing-normal, 30%);border: solid 1px $pricing-normal; }
+  	&.featured.pricing-default { box-shadow: 0px 1px 2px 1px lighten($pricing-default, 30%);border: solid 1px $pricing-default; }
+  	&.featured.pricing-success { box-shadow: 0px 1px 2px 1px lighten($pricing-success, 30%);border: solid 1px $pricing-success; }
+  	&.featured.pricing-info { box-shadow: 0px 1px 2px 1px lighten($pricing-info, 30%);border: solid 1px $pricing-info; }
+  	&.featured.pricing-warning { box-shadow: 0px 1px 2px 1px lighten($pricing-warning, 30%);border: solid 1px $pricing-warning; }
+  	&.featured.pricing-danger { box-shadow: 0px 1px 2px 1px lighten($pricing-danger, 30%);border: solid 1px $pricing-danger; }
+
+  }
+
+// Stacked
+@media (min-width: 991px) {
+	.stacked .pricing-table {
+
+		// Primary
+		&.featured {
+			margin-top: -30px;
+			& .pricing-table-price { padding: 30px 0; }
+			& .pricing-table-content .pricing-table-button { padding: 30px 0 45px; }
+		}
+	}
+}
+@media (min-width: 360px) {
+	.stacked .pricing-table {
+
+		// Primary
+		&.featured {
+			& .pricing-table-title { background-color: $pricing-primary;color: #fff; }
+		}
+
+		// Normal
+		&.featured.pricing-normal { & .pricing-table-title { background-color: $pricing-normal; } }
+		
+		// Default
+		&.featured.pricing-default { & .pricing-table-title { background-color: $pricing-default; } }
+		
+		// Success
+		&.featured.pricing-success { & .pricing-table-title { background-color: $pricing-success; } }
+
+		// Info
+		&.featured.pricing-info { & .pricing-table-title { background-color: $pricing-info; } }
+
+		// Warning
+		&.featured.pricing-warning { & .pricing-table-title { background-color: $pricing-warning; } }
+
+		// Danger
+		&.featured.pricing-danger { & .pricing-table-title { background-color: $pricing-danger; } }
+	}
+}
+ 
+}

@@ -1,0 +1,107 @@
+// Variables
+//------------------------------------------------------
+$alert-info:                    $info-color !default;
+$alert-success:                 $success-color !default;
+$alert-danger:                  $danger-color !default;
+$alert-warning:                 $warning-color !default;
+
+$alert-close-color:             rgba(0,0,0,.2) !default;
+
+$alert-link-color:              rgba(0,0,0,.2) !default;
+
+
+// Exports
+//------------------------------------------------------
+
+@include exports("alert") {
+
+  /**
+   * alert
+   * --------------------------------------------------
+   */
+  .alert {
+    color: $white;
+    border-color: rgba(0,0,0,.2);
+    text-shadow: 0px -1px rgba(0,0,0,.2);
+
+      & h4 {
+          margin-bottom: 10px;
+          font-weight: bold;
+      }
+
+      &-dismissible .close,
+      &-dismissable .close {
+          color: $alert-close-color;
+          top: -14px;
+          right: -31px;
+          text-shadow: none;
+          opacity: 1;
+
+          & span { margin: 0 0.5rem;font-size: 1.5rem; }
+      }
+
+      & i { margin: 0 1.5rem 0 1rem; }
+
+      &-sm { 
+        width: 48.5%;
+        padding: .5rem;
+        float: left;
+
+        &.alert-dismissible .close,
+        &.alert-dismissable .close {
+          top: -5px;
+          right: -2px;
+        }
+      }
+
+      @at-root &-info {
+          background-color: $alert-info;
+          background-image: linear-gradient(to bottom right, $alert-info, $alert-info, darken($alert-info,7%));
+          background-image: -o-linear-gradient(top left, $alert-info, $alert-info, darken($alert-info,7%));
+          background-image: -webkit-linear-gradient(top left, $alert-info, $alert-info, darken($alert-info,7%));
+      }
+      @at-root &-warning {
+          background-color: $alert-warning;
+          background-image: linear-gradient(to bottom right, $alert-warning, $alert-warning, darken($alert-warning,7%));
+          background-image: -o-linear-gradient(top left, $alert-warning, $alert-warning, darken($alert-warning,7%));
+          background-image: -webkit-linear-gradient(top left, $alert-warning, $alert-warning, darken($alert-warning,7%));
+      }
+      @at-root &-danger {
+          background-color: $alert-danger;
+          background-image: linear-gradient(to bottom right, $alert-danger, $alert-danger, darken($alert-danger,7%));
+          background-image: -o-linear-gradient(top left, $alert-danger, $alert-danger, darken($alert-danger,7%));
+          background-image: -webkit-linear-gradient(top left, $alert-danger, $alert-danger, darken($alert-danger,7%));
+      }
+      @at-root &-success {
+          background-color: $alert-success;
+          background-image: linear-gradient(to bottom right, $alert-success, $alert-success, darken($alert-success,7%));
+          background-image: -o-linear-gradient(top left, $alert-success, $alert-success, darken($alert-success,7%));
+          background-image: -webkit-linear-gradient(top left, $alert-success, $alert-success, darken($alert-success,7%));
+      }
+
+      @at-root & &-link {
+          cursor: pointer;
+          text-decoration: underline;
+          @include opacity($opacity: 65, $filter: true); 
+          &:hover,
+          &:focus {
+              @include opacity($opacity: 45, $filter: true);            
+          }
+      }
+
+      @at-root & .btn-link,
+      & .btn-link:hover,
+      & .btn-link:focus {
+          color: $alert-close-color;
+          @include opacity($opacity: 65, $filter: true);
+      }
+      @at-root & .btn-link:focus,
+      & .btn-link:hover {
+          text-decoration: none;
+          @include opacity($opacity: 40, $filter: true);        
+      }
+  }
+
+}
+
+

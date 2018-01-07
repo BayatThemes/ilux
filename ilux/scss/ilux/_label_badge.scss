@@ -1,0 +1,161 @@
+// Variables
+//------------------------------------------------------
+$label-normal:                  $lavender-light !default;
+$label-default:                 $normal-color !default;
+$label-primary:                 $primary-color !default;
+$label-success:                 $success-color !default;
+$label-info:                    $info-color !default;
+$label-warning:                 $warning-color !default;
+$label-danger:                  $danger-color !default;
+
+$label-default-font-color:      $darkgray-dark !default;
+
+// Exports
+//------------------------------------------------------
+
+@include exports("label-badge") {
+
+  /**
+   * labels and badges
+   * --------------------------------------------------
+   */
+  .label,
+  .badge {
+    background-color: transparent;
+    border: 1px solid;
+    border-bottom-width: 2px;
+    border-color: $label-normal;
+    font-weight: 200;
+  }
+
+  .label-default,
+  .badge-default {
+    background-color: transparent;
+    color: $label-default;
+    border-color: $label-default;
+  }
+
+  .label-primary,
+  .badge-primary {
+    border-color: $label-primary;
+    color: $label-primary;
+    background-color: transparent;
+  }
+
+  .label-success,
+  .badge-success {
+    border-color: $label-success;
+    color: $label-success;
+    background-color: transparent;
+  }
+
+  .label-danger,
+  .badge-danger {
+    border-color: $label-danger;
+    color: $label-danger;
+    background-color: transparent;
+  }
+
+  .label-warning,
+  .badge-warning {
+    border-color: $label-warning;
+    color: $label-warning;
+    background-color: transparent;
+  }
+
+  .label-info,
+  .badge-info {
+    border-color: $label-info;
+    color: $label-info;
+    background-color: transparent;
+  }
+
+  // Pill
+  .label-pill { border-radius: 5rem; }
+
+  // Filled & Badges
+  .badge { color: $white !important;margin: 0; }
+
+  .badge,
+  .label-filled {
+    background-color: $label-primary;
+    border-bottom-width: 1px;
+    border-color: rgba(0,0,0,.1);
+    background-image: linear-gradient(to bottom right,$label-primary,lighten($label-primary, 5%),darken($label-primary,10%));
+    background-image: -o-linear-gradient(top left,$label-primary,$label-primary,darken($label-primary,10%));
+    background-image: -webkit-linear-gradient(top left,$label-primary,$label-primary,darken($label-primary,10%));
+  }
+  .badge-default,
+  .label-default-filled {
+    background-color: $label-default;
+    border-bottom-width: 1px;
+    border-color: rgba(0,0,0,.1);
+    background-image: linear-gradient(to bottom right,$label-default,lighten($label-default, 5%),darken($label-default,10%));
+    background-image: -o-linear-gradient(top left,$label-default,$label-default,darken($label-default,10%));
+    background-image: -webkit-linear-gradient(top left,$label-default,$label-default,darken($label-default,10%));
+  }
+  .badge-primary,
+  .label-primary-filled {
+    background-color: $label-primary;
+    border-bottom-width: 1px;
+    border-color: rgba(0,0,0,.1);
+    background-image: linear-gradient(to bottom right,$label-primary,lighten($label-primary, 5%),darken($label-primary,10%));
+    background-image: -o-linear-gradient(top left,$label-primary,$label-primary,darken($label-primary,10%));
+    background-image: -webkit-linear-gradient(top left,$label-primary,$label-primary,darken($label-primary,10%));
+  }
+  .badge-success,
+  .label-success-filled {
+    background-color: $label-success;
+    border-bottom-width: 1px;
+    border-color: rgba(0,0,0,.1);
+    background-image: linear-gradient(to bottom right,$label-success,lighten($label-success, 5%),darken($label-success,10%));
+    background-image: -o-linear-gradient(top left,$label-success,$label-success,darken($label-success,10%));
+    background-image: -webkit-linear-gradient(top left,$label-success,$label-success,darken($label-success,10%));
+  }
+  .badge-warning,
+  .label-warning-filled {
+    background-color: $label-warning;
+    border-bottom-width: 1px;
+    border-color: rgba(0,0,0,.1);
+    background-image: linear-gradient(to bottom right,$label-warning,lighten($label-warning, 5%),darken($label-warning,10%));
+    background-image: -o-linear-gradient(top left,$label-warning,$label-warning,darken($label-warning,10%));
+    background-image: -webkit-linear-gradient(top left,$label-warning,$label-warning,darken($label-warning,10%));
+  }
+  .badge-danger,
+  .label-danger-filled {
+    background-color: $label-danger;
+    border-bottom-width: 1px;
+    border-color: rgba(0,0,0,.1);
+    background-image: linear-gradient(to bottom right,$label-danger,lighten($label-danger, 5%),darken($label-danger,10%));
+    background-image: -o-linear-gradient(top left,$label-danger,$label-danger,darken($label-danger,10%));
+    background-image: -webkit-linear-gradient(top left,$label-danger,$label-danger,darken($label-danger,10%));
+  }
+  .badge-info,
+  .label-info-filled {
+    background-color: $label-info;
+    border-bottom-width: 1px;
+    border-color: rgba(0,0,0,.1);
+    background-image: linear-gradient(to bottom right,$label-info,lighten($label-info, 5%),darken($label-info,10%));
+    background-image: -o-linear-gradient(top left,$label-info,$label-info,darken($label-info,10%));
+    background-image: -webkit-linear-gradient(top left,$label-info,$label-info,darken($label-info,10%));
+  }
+  .badge-default,
+  .label-default-filled {
+    background-color: $label-default;
+    border-bottom-width: 1px;
+    border-color: rgba(0,0,0,.1);
+    background-image: linear-gradient(to bottom right,$label-default,lighten($label-default, 5%),darken($label-default,10%));
+    background-image: -o-linear-gradient(top left,$label-default,$label-default,darken($label-default,10%));
+    background-image: -webkit-linear-gradient(top left,$label-default,$label-default,darken($label-default,10%));
+  }
+
+
+  .list-group-item.active>.badge,
+  .nav-pills>.active>a>.badge {
+    background-image: none;
+    background-color: $white;
+    color: $label-primary !important;
+  }
+
+
+}

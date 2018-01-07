@@ -1,0 +1,36 @@
+// Variables
+//------------------------------------------------------
+$card-block-padding:			1.15rem;
+
+
+// Exports
+//------------------------------------------------------
+@include exports("card") {
+	.card {
+		position: relative;
+	    display: block;
+	    margin-bottom: 30px;
+	    border-radius: 0;
+	    border: 0;
+	    width: 100%;
+
+	    & img { width: 100%; }
+	    & .card-block {
+	    	padding: $card-block-padding;
+	    	background-color: #f7f7f7;
+	    	& h3 { margin-top: 0;margin-bottom: $card-block-padding; }
+	    	& img { margin-bottom: $card-block-padding; }
+	    	& p:last-child { margin-bottom: 0 }
+	    }
+	}
+
+	#cards-carousel .card, {
+		& .card-block { margin: 0 10px; }
+	}
+
+	#image-carousel .item {
+		margin: 0 10px
+	}
+
+	.carousel-post { padding: $card-block-padding; }
+}

@@ -1,0 +1,145 @@
+// Variables
+//------------------------------------------------------
+$footer-pbg-color:                   $primary-color !default;
+$footer-background-color:            $darkgray-dark !default;
+$footer-menu-title-color:            $lightgray-dark !default;
+$footer-menu-item-color:             $mediumgray-dark !default;
+$footer-menu-item-color-hover:       $mediumgray-light !default;
+$footer-logo-color:                  $white !default;
+
+$footer-padding: 15px;
+$footer-padding-b: 10px;
+
+
+
+// Exports
+//------------------------------------------------------
+
+@include exports("footer") {
+
+  /**
+   * footer
+   * --------------------------------------------------
+   */
+
+  .footer {
+    padding: 40px 0;
+    background-color: $footer-background-color;
+
+    &-logo,
+    &-nav {
+      float: left;
+      padding: 0 20px;
+      width: 20%;
+    }
+    @media (max-width: 768px) {
+      &-logo {
+        margin-bottom: 20px;
+      }
+      &-logo,
+      &-nav {
+        float: none;
+        display: block;
+        width: 100%;
+      }      
+    }
+    &-logo {
+      margin-top: -5px;
+      height: 32px;
+      line-height: 32px;
+
+      & img {
+        margin-right: 10px;
+      }
+      & a {
+        font-size: 20px;
+        font-weight: bold;
+        color: $footer-logo-color;
+      }
+      & a:hover,
+      & a:active {
+        text-decoration: none;
+      }
+    }
+    &-nav .nav-title {
+      margin-bottom: 15px;
+      color: $footer-menu-title-color;
+    }
+    &-nav .nav-item {
+      line-height: 28px;
+      & > a {
+        color: $footer-menu-item-color;
+      }
+      & > a:hover,
+      & > a:active {
+        color: $footer-menu-item-color-hover;
+        text-decoration: none;
+      }
+    }
+    &-copyright {
+      color: $footer-menu-item-color;
+    }
+  }
+
+  footer {
+
+    &.color-footer {
+      background-color: $footer-pbg-color;
+      & .widget-area {
+        background-color: rgba(255,255,255,.15);
+        & a { color: #fff; }
+      }
+    }
+
+    &.light-footer { 
+      background-color: #f7f7f7;
+      & .widget-area { background-color: rgba(255,255,255,.85) }
+    }
+
+    &.dark-footer { 
+      background-color: #484848;color: #ccc;
+      & .widget-area { background-color: rgba(255,255,255,.05) }
+      & .blog-post-small.first-post {
+        border-bottom: 1px solid rgba(255,255,255,.5);      }
+    }
+    & .footer-info { padding: $footer-padding 0 $footer-padding-b; }
+    & .social a { margin-left: $footer-padding-b; }
+    & .widget-area { padding: 50px 0; }
+
+    & .blog-post-small {
+      margin-top: 25px;
+      padding-bottom: 30px;
+
+      & img {
+        float: left;
+        max-width: 66px;
+        margin: 0 10px 0 0;
+      }
+    }
+    & .blog-post-small.first-post {
+      border-bottom: 1px solid rgba(0,0,0,.1);
+      margin-top: 0;
+    }
+    & .blog-post-small.second-post {
+      margin-top: 25px;
+      padding-bottom: 0;
+    }
+
+    .projects-widget img {
+      max-width: 84px;
+      float: left;
+      margin: 0;
+      border-right: 6px solid transparent;
+      border-bottom: 6px solid transparent;
+      display: inline-block;
+    }
+
+    .contact-widget .info { margin-bottom: 15px }
+
+    & .btn { margin-left: 0 !important; }
+
+  }
+
+}
+
+

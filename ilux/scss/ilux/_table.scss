@@ -1,0 +1,100 @@
+// Variables
+//------------------------------------------------------
+$table-column-space:			1.5rem 1.5rem;
+
+
+// Exports
+//------------------------------------------------------
+@include exports("table") {
+	table {
+		tr {
+			position: relative;
+			border-left: solid 1px transparent;
+			border-right: solid 1px transparent;
+			@include transition(all 0.095s ease-in);
+			td,th { padding: $table-column-space !important;position: relative; }
+			&:last-child { 
+				border-bottom: solid 1px transparent;
+				&:hover { border-bottom-color: rgba(0,0,0,.1); }
+			}
+		}
+
+		tbody tr {
+			&:hover { 
+				//box-shadow: 0px 1px 2px 1px rgba(0,0,0,.1);
+				border-left-color: rgba(0,0,0,.1);
+				border-right-color: rgba(0,0,0,.1);
+				th:after { opacity: 1; }
+			}
+			@media screen and (max-width: 767px) { &:hover { border-color: transparent !important; } }
+			th:after {
+				position: absolute;
+			    bottom: 40%;
+			    left: -5px;
+			    display: block;
+			    float: right;
+			    margin: auto;
+			    content: "";
+			    width: 10px;
+			    height: 10px;
+			    background: #fcfcfc;
+			    @include transform(rotate(45deg));
+			    border-top: 1px solid rgba(0,0,0,.1);
+			    border-right: 1px solid rgba(0,0,0,.1);
+			    opacity: 0;
+			    @include transition(all 0.095s ease-in);
+			}
+		}
+
+		&.shopping-cart {
+			& thead { background-color: rgba(0,0,0,.025); }
+			& tbody td { vertical-align: middle; }
+			tbody tr {
+				&:hover { 
+					//box-shadow: 0px 1px 2px 1px rgba(0,0,0,.1);
+					border-left-color: rgba(0,0,0,.1);
+					border-right-color: rgba(0,0,0,.1);
+					td:first-child:after { opacity: 1; }
+				}
+				@media screen and (max-width: 767px) { &:hover { border-color: transparent !important; } }
+				td:first-child:after {
+					position: absolute;
+				    bottom: 44%;
+				    left: -5px;
+				    display: block;
+				    float: right;
+				    margin: auto;
+				    content: "";
+				    width: 10px;
+				    height: 10px;
+				    background: #fcfcfc;
+				    @include transform(rotate(45deg));
+				    border-top: 1px solid rgba(0,0,0,.1);
+				    border-right: 1px solid rgba(0,0,0,.1);
+				    opacity: 0;
+				    @include transition(all 0.095s ease-in);
+				}
+				&:last-child { 
+					border-bottm: solid 1px transparent;
+					&:hover { border-bottom-color: rgba(0,0,0,.1); }
+				}
+			}
+
+			@media (min-width: 360px) { td.image img { max-width: none; } }
+			// @media (min-width: 361px) { td.image img { width: 70px; } }
+
+		}
+		.qty input[type="number"] {
+		    max-width: 50px;
+		    max-height: 50px;
+		    padding: 14px 4px 10px 8px;
+		    float: left;
+		    outline: none !important;
+		}
+		.x-remove {
+			padding: .1rem .8rem;
+    		border-radius: 100%;
+		}
+		img { border-radius: 3px; }
+	}
+}

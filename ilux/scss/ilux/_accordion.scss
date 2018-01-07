@@ -1,0 +1,123 @@
+// Variables
+//------------------------------------------------------
+$accordion-border-color:                       $lightgray-dark !default;
+
+$accordion-panel-font-color:                   $darkgray-dark !default;
+$accordion-panel-font-color-hover:             $mediumgray-dark !default;
+$accordion-primary:                            $primary-color !default;
+$accordion-panel-radius:                       4px !default;
+
+$accordion-panel-shadow:                       0 1px 2px rgba(0, 0, 0, .2) !default;
+
+$accordion-panel-background-color:             $white !default;
+
+
+
+// Exports
+//------------------------------------------------------
+
+@include exports("accordion") {
+
+  /**
+   * accordion
+   * --------------------------------------------------
+   */
+  .panel-group {
+    & .panel {
+      @include radius($type: border-radius, $value: 0);
+      background-color: transparent;
+      @include box-shadow($value: none);
+    }
+
+    // Tabbed version
+    &.tabbed {
+
+      & .panel-heading {
+        border-radius: 0;
+        background-color: rgba(0,0,0,.025);
+        background-image: -webkit-linear-gradient(top left, rgba(0,0,0,.025), rgba(0,0,0,.1), rgba(0,0,0,.1));
+        background-image: -o-linear-gradient(top left, rgba(0,0,0,.025), rgba(0,0,0,.1), rgba(0,0,0,.1));
+        background-image: linear-gradient(to bottom right, rgba(0,0,0,.025), rgba(0,0,0,.1), rgba(0,0,0,.1));
+        padding: 1.5rem 2rem;
+      }
+
+      & a.panel-title {
+        color: $accordion-panel-font-color;
+        &:after { float: right;margin-top: 2px; }
+        &:hover, &:focus { color: $accordion-panel-font-color; }
+      }
+    }
+
+    & .panel+.panel {
+      margin-top: 0;
+    }
+    & .panel-heading {
+      padding: 0;
+      border-bottom-color: transparent;
+
+      & > a {
+        font-weight: bold;
+        @include transition(all 0.096s ease-in);
+      }
+
+      & > a:after {
+        display: inline-block;
+        vertical-align: middle;
+        font-family: "FontAwesome";
+        font-size: 13px;
+        content: "\f077";
+        margin-top: -2px;
+        margin-left: 10px;
+        @include transform(rotate(0));
+        @include transition(all 0.36s ease-in);
+      }
+
+      & > .panel-title {
+        color: $accordion-panel-font-color;
+        &:focus { color: $accordion-primary; }
+      }
+
+      & > .panel-title.collapsed:after {
+        @include transform(rotate(-180deg));
+      }
+    }
+    & .panel-heading+.panel-collapse .panel-body {
+      padding: 15px 0;
+      border-top-color: transparent;
+    }
+    & .panel-title a {
+      padding: 10px 0;
+      display: block;
+    }
+  }
+  .panel-group-lists {
+    & .panel {
+      border-bottom: 1px solid $accordion-border-color;
+      background-color: $accordion-panel-background-color;
+      @include box-shadow($value: $accordion-panel-shadow);
+    }
+    & .panel:first-child {
+      @include radius($type: border-radius, $value: $accordion-panel-radius $accordion-panel-radius 0 0);
+    }
+    & .panel:last-child {
+      @include radius($type: border-radius, $value: 0 0 $accordion-panel-radius $accordion-panel-radius);
+      border-bottom: none;
+    }
+    & .panel-heading+.panel-collapse .panel-body {
+      padding: 15px;
+      border-top-color: $accordion-border-color;
+    }
+    & .panel-title a {
+      padding: 10px 15px;
+      color: $accordion-panel-font-color;
+    }
+    & .panel-title a:hover,
+    & .panel-title a:focus,
+    & .panel-title a:active {
+      color: $accordion-panel-font-color-hover;
+    }
+  }
+
+}
+
+

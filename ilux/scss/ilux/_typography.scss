@@ -1,0 +1,215 @@
+// Variables
+//------------------------------------------------------
+$body-font-size:             1.6em;
+
+$link-font-color:            $primary-color !default; 
+$link-font-color-hover:      lighten($primary-color, 10%) !default; 
+
+$blockquote-border-color:    darken($white, 5%) !default;
+
+$image-radius:               4px !default;
+
+$letter-spacing:             .01em;
+
+$line-height:                1.6;
+
+$text-default-color:            $normal-color;
+$text-primary-color:            $primary-color;
+$text-success-color:            $success-color;
+$text-info-color:               $info-color;
+$text-warning-color:            $warning-color;
+$text-danger-color:             $danger-color;
+
+// Exports
+//------------------------------------------------------
+
+@include exports("typography") {
+
+  /**
+   * typography
+   * --------------------------------------------------
+   */
+
+  body {
+    font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    font-size: $body-font-size;
+    letter-spacing: $letter-spacing;
+    line-height: $line-height;
+  }
+  a {
+    color: darken($link-font-color, 10%);
+    @include transition(all 0.095s ease-in);
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: $link-font-color-hover;
+      text-decoration: none;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6 {
+    font-family: 'Quicksand', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    line-height: 1.1;
+    color: inherit;
+  }
+  h1 small,
+  h2 small,
+  h3 small,
+  h4 small,
+  h5 small,
+  h6 small,
+  .h1 small,
+  .h2 small,
+  .h3 small,
+  .h4 small,
+  .h5 small,
+  .h6 small {
+    color: #e7e9ec;
+  }
+  h1,
+  h2,
+  h3 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+  h4,
+  h5,
+  h6 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  h6 {
+    font-weight: normal;
+  }
+  h1,
+  .h1 {
+    font-size: 4.6rem;
+  }
+  h2,
+  .h2 {
+    font-size: 3.6rem;
+  }
+  h3,
+  .h3 {
+    font-size: 2.8rem;
+  }
+  h4,
+  .h4 {
+    font-size: 2.2rem;
+  }
+  h5,
+  .h5 {
+    font-size: 1.8rem;
+  }
+  h6,
+  .h6 {
+    font-size: 1.6rem;
+  }
+  blockquote,
+  blockquote.blockquote-reverse {
+
+    & p {
+      font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 1.6rem;
+    }
+
+    & cite {
+      font-family: 'Quicksand', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-weight: 300;
+      font-size: 1.4rem;
+      color: darken($white, 15%);
+    }
+  }
+  .img-rounded {
+    @include radius($type: border-radius, $value: $image-radius);
+  }
+  .img-comment {
+    font-size: 15px;
+    line-height: 1.2;
+    font-style: italic;
+    margin: 24px 0;
+  }
+
+  blockquote { border-left: 5px solid $blockquote-border-color; }
+  blockquote.blockquote-reverse { border-right: 5px solid $blockquote-border-color; }
+
+  /**
+   * Text Background
+   * --------------------------------------------------
+   */
+  .bg-default,
+  .bg-primary,
+  .bg-success,
+  .bg-info,
+  .bg-warning,
+  .bg-danger
+  { padding: 3px 5px;color: $white;margin: 0; }
+
+  .bg-default { background-color: $text-default-color; }
+  .bg-primary { background-color: $text-primary-color; }
+  .bg-success { background-color: $text-success-color; }
+  .bg-info    { background-color: $text-info-color; }
+  .bg-warning { background-color: $text-warning-color; }
+  .bg-danger  { background-color: $text-danger-color; }
+
+
+
+  /**
+   * Text Colors
+   * --------------------------------------------------
+   */
+  .text-default { color: $text-default-color; }
+  .text-primary { color: $text-primary-color; }
+  .text-success { color: $text-success-color; }
+  .text-info    { color: $text-info-color; }
+  .text-warning { color: $text-warning-color; }
+  .text-danger  { color: $text-danger-color; }
+
+  .toggle,
+  .checkbox label span,
+  .radio label span
+  { 
+    font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 200;
+  }
+
+
+  /**
+   * Brand Font
+   * --------------------------------------------------
+   */
+  .brand,
+  .navbar-brand span {
+    font-family: 'Lobster Two', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+
+  .navbar-brand { font-size: 3rem; }
+
+
+  /**
+   * Paragraph Sizes
+   * --------------------------------------------------
+   */
+  .lead { font-size: 110% }
+  .text-sm { font-size: 90% }
+  .text-xs { font-size: 80% }
+
+}
+
+
