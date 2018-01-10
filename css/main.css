@@ -39,7 +39,7 @@
 	#splash { height: 685px; }
 }
 #splash > .slogan { color: #fff;position: relative;
-  top: 47%;
+  top: 37%;
   transform: translateY(-47%);
   text-shadow: 0px 3px rgba(0,0,0,.2); }
 #splash > .slogan > .brand { font-size: 7.5em;display: block;line-height: .7;margin-bottom: 15px; }
