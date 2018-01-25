@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>iLux - Tables</title>
+
+	<!-- sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<!-- load bootstrap -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<!-- load main styles -->
+	<link rel="stylesheet" href="css/main.css">
+
+	<!-- load iLux -->
+	<link rel="stylesheet" href="ilux/css/ilux.min.css">
+
+	<!-- load fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Lobster+Two|Quicksand:300,700|Roboto:200,300,400,700" rel="stylesheet">
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+
+<div id="tables">
+    <div class="container">
+
+    	<div class="brand text-center"><a href="">ilux</a></div>
+        <div class="page-header text-center"><h2>Tables</h2></div>
+
+        <!-- default table -->
+        <h4 class="sub-title">Default Tables</h4>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>User Name</th>
+                        <th>Position</th>
+                        <th>Contact Info</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>John</td>
+                        <td>Doe</td>
+                        <td>@jhndoe</td>
+                        <td>CEO</td>
+                        <td>john@doe.com, +1 234 567 89</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jane</td>
+                        <td>Dowe</td>
+                        <td>@jandow</td>
+                        <td>Designer</td>
+                        <td>jane@dowe.com, +1 234 567 89</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>James</td>
+                        <td>Doe</td>
+                        <td>@jmsdoe</td>
+                        <td>Project Manager</td>
+                        <td>james@doe.com, +1 234 567 89</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>Jasmine</td>
+                        <td>Larger</td>
+                        <td>@jsmnlrgr</td>
+                        <td>Web Developer</td>
+                        <td>jasmine@email.com</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- / default table -->
+
+        <div class="space-5">&nbsp;</div>
+
+        <!-- striped table -->
+        <h4 class="sub-title">Striped Tables</h4>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>User Name</th>
+                        <th>Position</th>
+                        <th>Contact Info</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>John</td>
+                        <td>Doe</td>
+                        <td>@jhndoe</td>
+                        <td>CEO</td>
+                        <td>john@doe.com, +1 234 567 89</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jane</td>
+                        <td>Dowe</td>
+                        <td>@jandow</td>
+                        <td>Designer</td>
+                        <td>jane@dowe.com, +1 234 567 89</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>James</td>
+                        <td>Doe</td>
+                        <td>@jmsdoe</td>
+                        <td>Project Manager</td>
+                        <td>james@doe.com, +1 234 567 89</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>Jasmine</td>
+                        <td>Larger</td>
+                        <td>@jsmnlrgr</td>
+                        <td>Web Developer</td>
+                        <td>jasmine@email.com</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- / striped table -->
+
+        <div class="space-5">&nbsp;</div>
+
+        <!-- shopping cart table -->
+        <h4 class="sub-title space-left">Shopping Cart Table</h4>
+        <div class="table-responsive">
+            <table class="table shopping-cart">
+                <thead>
+                    <tr>
+                        <th class="image">&nbsp;</th>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>&nbsp;</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="cart-item">
+                        <td class="image"><a href="#"><img src="images/nproduct-1.png" alt=""></a></td>
+                        <td><a href="#">Product 1</a></td>
+                        <td>$49.99</td>
+                        <td class="qty"><input type="number" step="1" min="0" name="cart" value="1" title="Qty" class="input-text qty text" size="4"></td>
+                        <td>$49.99</td>
+                        <td class="remove"><a href="#" class="btn btn-danger-filled x-remove">×</a></td>
+                    </tr>
+                    <tr class="cart-item">
+                        <td class="image"><a href="#"><img src="images/nproduct-2.png" alt=""></a></td>
+                        <td><a href="#">Product 2</a></td>
+                        <td>$69.99</td>
+                        <td class="qty"><input type="number" step="1" min="0" name="cart" value="2" title="Qty" class="input-text qty text" size="4"></td>
+                        <td>$139.98</td>
+                        <td class="remove"><a href="#" class="btn btn-danger-filled x-remove">×</a></td>
+                    </tr>
+                    <tr class="cart-item">
+                        <td class="image"><a href="#"><img src="images/nproduct-3.png" alt=""></a></td>
+                        <td><a href="#">Product 3</a></td>
+                        <td>$29.99</td>
+                        <td class="qty"><input type="number" step="1" min="0" name="cart" value="1" title="Qty" class="input-text qty text" size="4"></td>
+                        <td>$29.99</td>
+                        <td class="remove"><a href="#" class="btn btn-danger-filled x-remove">×</a></td>
+                    </tr>
+                    <tr class="cart-item">
+                        <td class="image"><a href="#"><img src="images/nproduct-4.png" alt=""></a></td>
+                        <td><a href="#">Product 4</a></td>
+                        <td>$19.99</td>
+                        <td class="qty"><input type="number" step="1" min="0" name="cart" value="3" title="Qty" class="input-text qty text" size="4"></td>
+                        <td>$59.97</td>
+                        <td class="remove"><a href="#" class="btn btn-danger-filled x-remove">×</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- / shopping cart table -->
+
+        <div class="space-10">&nbsp;</div>
+
+    </div><!-- / container -->
+</div>
+
+<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+</html>

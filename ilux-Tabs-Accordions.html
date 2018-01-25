@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>iLux - Tabs &amp; Accordions</title>
+
+	<!-- sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<!-- load bootstrap -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<!-- load Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+
+	<!-- load main styles -->
+	<link rel="stylesheet" href="css/main.css">
+
+	<!-- load iLux -->
+	<link rel="stylesheet" href="ilux/css/ilux.min.css">
+
+	<!-- load fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Lobster+Two|Quicksand:300,700|Roboto:200,300,400,700" rel="stylesheet">
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+
+<div id="tabs-accordions">
+    <div class="container">
+        <!-- tabs -->
+        <div class="brand text-center"><a href="">ilux</a></div>
+        <div class="page-header text-center"><h2>Tabs and Accordions</h2></div>
+        <!-- default tabs -->
+        <h4 class="sub-title space-left">Tabs</h4>
+        <div class="row">
+            <!-- tabs left -->
+            <div class="col-sm-6">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li class="active"><a href="#tab1" role="tab" data-toggle="tab" aria-expanded="true">Tab 1</a></li>
+                    <li class=""><a href="#tab2" role="tab" data-toggle="tab" aria-expanded="false">Tab 2</a></li>
+                    <li class=""><a href="#tab3" role="tab" data-toggle="tab" aria-expanded="false">Tab 3</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane animated fadeIn active" id="tab1">Curabitur convallis nunc urna, sit amet pulvinar neque commodo in. Fusce vel ex sed nisi consequat molestie a quis massa. Maecenas vel dictum magna. Aenean non mauris accumsan massa efficitur molestie vel tristique nibh. Phasellus magna odio, feugiat ac leo eget, commodo imperdiet turpis. Nulla sodales purus eu augue semper, et tincidunt nisl placerat.</div>
+                    <div role="tabpanel" class="tab-pane animated fadeIn" id="tab2">Curabitur convallis nunc urna, sit amet pulvinar neque commodo in. Fusce vel ex sed nisi consequat molestie a quis massa. Maecenas vel dictum magna. Aenean non mauris accumsan massa efficitur molestie vel tristique nibh. Phasellus magna odio, feugiat ac leo eget, commodo imperdiet turpis. Nulla sodales purus eu augue semper, et tincidunt nisl placerat.</div>
+                    <div role="tabpanel" class="tab-pane animated fadeIn" id="tab3">Curabitur convallis nunc urna, sit amet pulvinar neque commodo in. Fusce vel ex sed nisi consequat molestie a quis massa. Maecenas vel dictum magna. Aenean non mauris accumsan massa efficitur molestie vel tristique nibh. Phasellus magna odio, feugiat ac leo eget, commodo imperdiet turpis. Nulla sodales purus eu augue semper, et tincidunt nisl placerat.</div>
+                </div>
+            </div><!-- / col-sm-6 -->
+            <!-- / tabs left -->
+
+            <!-- tabs right -->
+            <div class="col-sm-6">
+                <ul class="nav nav-tabs text-right" role="tablist">
+                    <li class="active"><a href="#tab4" role="tab" data-toggle="tab" aria-expanded="true">Tab 1</a></li>
+                    <li class=""><a href="#tab5" role="tab" data-toggle="tab" aria-expanded="false">Tab 2</a></li>
+                    <li class=""><a href="#tab6" role="tab" data-toggle="tab" aria-expanded="false">Tab 3</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane animated fadeIn active" id="tab4">Curabitur convallis nunc urna, sit amet pulvinar neque commodo in. Fusce vel ex sed nisi consequat molestie a quis massa. Maecenas vel dictum magna. Aenean non mauris accumsan massa efficitur molestie vel tristique nibh. Phasellus magna odio, feugiat ac leo eget, commodo imperdiet turpis. Nulla sodales purus eu augue semper, et tincidunt nisl placerat.</div>
+                    <div role="tabpanel" class="tab-pane animated fadeIn" id="tab5">Curabitur convallis nunc urna, sit amet pulvinar neque commodo in. Fusce vel ex sed nisi consequat molestie a quis massa. Maecenas vel dictum magna. Aenean non mauris accumsan massa efficitur molestie vel tristique nibh. Phasellus magna odio, feugiat ac leo eget, commodo imperdiet turpis. Nulla sodales purus eu augue semper, et tincidunt nisl placerat.</div>
+                    <div role="tabpanel" class="tab-pane animated fadeIn" id="tab6">Curabitur convallis nunc urna, sit amet pulvinar neque commodo in. Fusce vel ex sed nisi consequat molestie a quis massa. Maecenas vel dictum magna. Aenean non mauris accumsan massa efficitur molestie vel tristique nibh. Phasellus magna odio, feugiat ac leo eget, commodo imperdiet turpis. Nulla sodales purus eu augue semper, et tincidunt nisl placerat.</div>
+                </div>
+            </div><!-- / col-sm-6 -->
+            <!-- / tabs right -->
+        </div><!-- / row -->
+        <!-- / default tabs -->
+
+        <div class="space-5">&nbsp;</div>
+
+        <!-- tabs pills -->
+        <div class="row">
+            <!-- tabs left -->
+            <div class="col-sm-6">
+                <ul class="nav nav-pills" role="tablist">
+                    <li class="active"><a href="#tab7" role="tab" data-toggle="tab" aria-expanded="true">Tab 1</a></li>
+                    <li class=""><a href="#tab8" role="tab" data-toggle="tab" aria-expanded="false">Tab 2</a></li>
+                    <li class=""><a href="#tab9" role="tab" data-toggle="tab" aria-expanded="false">Tab 3</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane animated fadeIn active" id="tab7">Curabitur convallis nunc urna, sit amet pulvinar neque commodo in. Fusce vel ex sed nisi consequat molestie a quis massa. Maecenas vel dictum magna. Aenean non mauris accumsan massa efficitur molestie vel tristique nibh. Phasellus magna odio, feugiat ac leo eget, commodo imperdiet turpis. Nulla sodales purus eu augue semper, et tincidunt nisl placerat.</div>
+                    <div role="tabpanel" class="tab-pane animated fadeIn" id="tab8">Curabitur convallis nunc urna, sit amet pulvinar neque commodo in. Fusce vel ex sed nisi consequat molestie a quis massa. Maecenas vel dictum magna. Aenean non mauris accumsan massa efficitur molestie vel tristique nibh. Phasellus magna odio, feugiat ac leo eget, commodo imperdiet turpis. Nulla sodales purus eu augue semper, et tincidunt nisl placerat.</div>
+                    <div role="tabpanel" class="tab-pane animated fadeIn" id="tab9">Curabitur convallis nunc urna, sit amet pulvinar neque commodo in. Fusce vel ex sed nisi consequat molestie a quis massa. Maecenas vel dictum magna. Aenean non mauris accumsan massa efficitur molestie vel tristique nibh. Phasellus magna odio, feugiat ac leo eget, commodo imperdiet turpis. Nulla sodales purus eu augue semper, et tincidunt nisl placerat.</div>
+                </div>
+            </div><!-- / col-sm-6 -->
+            <!-- / tabs left -->
+
+            <!-- tabs right -->
+            <div class="col-sm-6">
+                <ul class="nav nav-pills text-right" role="tablist">
+                    <li class="active"><a href="#tab10" role="tab" data-toggle="tab" aria-expanded="true">Tab 1</a></li>
+                    <li class=""><a href="#tab11" role="tab" data-toggle="tab" aria-expanded="false">Tab 2</a></li>
+                    <li class=""><a href="#tab12" role="tab" data-toggle="tab" aria-expanded="false">Tab 3</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane animated fadeIn active" id="tab10">Curabitur convallis nunc urna, sit amet pulvinar neque commodo in. Fusce vel ex sed nisi consequat molestie a quis massa. Maecenas vel dictum magna. Aenean non mauris accumsan massa efficitur molestie vel tristique nibh. Phasellus magna odio, feugiat ac leo eget, commodo imperdiet turpis. Nulla sodales purus eu augue semper, et tincidunt nisl placerat.</div>
+                    <div role="tabpanel" class="tab-pane animated fadeIn" id="tab11">Curabitur convallis nunc urna, sit amet pulvinar neque commodo in. Fusce vel ex sed nisi consequat molestie a quis massa. Maecenas vel dictum magna. Aenean non mauris accumsan massa efficitur molestie vel tristique nibh. Phasellus magna odio, feugiat ac leo eget, commodo imperdiet turpis. Nulla sodales purus eu augue semper, et tincidunt nisl placerat.</div>
+                    <div role="tabpanel" class="tab-pane animated fadeIn" id="tab12">Curabitur convallis nunc urna, sit amet pulvinar neque commodo in. Fusce vel ex sed nisi consequat molestie a quis massa. Maecenas vel dictum magna. Aenean non mauris accumsan massa efficitur molestie vel tristique nibh. Phasellus magna odio, feugiat ac leo eget, commodo imperdiet turpis. Nulla sodales purus eu augue semper, et tincidunt nisl placerat.</div>
+                </div>
+            </div><!-- / col-sm-6 -->
+            <!-- / tabs right -->
+        </div><!-- / row -->
+        <!-- / tabs pills -->
+        <!-- / tabs -->
+
+        <div class="space-5">&nbsp;</div>
+
+        <!-- accordions -->
+        <div class="row">
+            <!-- default accordions -->
+            <div class="col-sm-6">
+                <h4 class="sub-title">Accordions</h4>
+                <div class="panel-group">
+                    <div class="panel">
+                    <div class="panel-heading">
+                        <a class="panel-title collapsed" data-toggle="collapse" href="#panel1" aria-expanded="false">First Accordion</a>
+                    </div>
+                    <div id="panel1" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+                        <div class="panel-body text-gray">
+                        Curabitur convallis nunc urna, sit amet pulvinar neque commodo in. Fusce vel ex sed nisi consequat molestie a quis massa. Maecenas vel dictum magna. Aenean non mauris accumsan massa efficitur molestie vel tristique nibh. Phasellus magna odio, feugiat ac leo eget placerat.
+                        </div>
+                    </div>
+                    </div><!-- / panel -->
+                </div><!-- / panel-group -->
+                <div class="panel-group">
+                    <div class="panel">
+                    <div class="panel-heading">
+                        <a class="panel-title collapsed" data-toggle="collapse" href="#panel2" aria-expanded="false">Second Accordion &gt; Active</a>
+                    </div>
+                    <div id="panel2" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+                        <div class="panel-body text-gray">
+                        Curabitur convallis nunc urna, sit amet pulvinar neque commodo in. Fusce vel ex sed nisi consequat molestie a quis massa. Maecenas vel dictum magna. Aenean non mauris accumsan massa efficitur molestie vel tristique nibh. Phasellus magna odio, feugiat ac leo eget placerat.
+                        </div>
+                    </div>
+                    </div><!-- / panel -->
+                </div><!-- / panel-group -->
+                <div class="panel-group">
+                    <div class="panel">
+                    <div class="panel-heading">
+                        <a class="panel-title collapsed" data-toggle="collapse" href="#panel3">Third Accordion</a>
+                    </div>
+                    <div id="panel3" class="panel-collapse collapse">
+                        <div class="panel-body text-gray">
+                        Curabitur convallis nunc urna, sit amet pulvinar neque commodo in. Fusce vel ex sed nisi consequat molestie a quis massa. Maecenas vel dictum magna. Aenean non mauris accumsan massa efficitur molestie vel tristique nibh. Phasellus magna odio, feugiat ac leo eget placerat.
+                        </div>
+                    </div>
+                    </div><!-- / panel -->
+                </div><!-- / panel-group -->
+            </div><!-- / col-sm-6 -->
+            <!-- / default accordions -->
+
+            <!-- tabbed accordions -->
+            <div class="col-sm-6">
+                <h4 class="sub-title">&nbsp;</h4>
+                <div class="panel-group tabbed">
+                    <div class="panel">
+                    <div class="panel-heading">
+                        <a class="panel-title collapsed" data-toggle="collapse" href="#panel4" aria-expanded="false">First Accordion</a>
+                    </div>
+                    <div id="panel4" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+                        <div class="panel-body text-gray">
+                        Curabitur convallis nunc urna, sit amet pulvinar neque commodo in. Fusce vel ex sed nisi consequat molestie a quis massa. Maecenas vel dictum magna. Aenean non mauris accumsan massa efficitur molestie vel tristique nibh. Phasellus magna odio, feugiat ac leo eget placerat.
+                        </div>
+                    </div>
+                    </div><!-- / panel -->
+                </div><!-- / panel-group -->
+                <div class="panel-group tabbed">
+                    <div class="panel">
+                    <div class="panel-heading">
+                        <a class="panel-title" data-toggle="collapse" href="#panel5">Second Accordion &gt; Active</a>
+                    </div>
+                    <div id="panel5" class="panel-collapse collapse in">
+                        <div class="panel-body text-gray">
+                        Curabitur convallis nunc urna, sit amet pulvinar neque commodo in. Fusce vel ex sed nisi consequat molestie a quis massa. Maecenas vel dictum magna. Aenean non mauris accumsan massa efficitur molestie vel tristique nibh. Phasellus magna odio, feugiat ac leo eget placerat.
+                        </div>
+                    </div>
+                    </div><!-- / panel -->
+                </div><!-- / panel-group -->
+                <div class="panel-group tabbed">
+                    <div class="panel">
+                    <div class="panel-heading">
+                        <a class="panel-title collapsed" data-toggle="collapse" href="#panel6">Third Accordion</a>
+                    </div>
+                    <div id="panel6" class="panel-collapse collapse">
+                        <div class="panel-body text-gray">
+                        Curabitur convallis nunc urna, sit amet pulvinar neque commodo in. Fusce vel ex sed nisi consequat molestie a quis massa. Maecenas vel dictum magna. Aenean non mauris accumsan massa efficitur molestie vel tristique nibh. Phasellus magna odio, feugiat ac leo eget placerat.
+                        </div>
+                    </div>
+                    </div><!-- / panel -->
+                </div><!-- / panel-group -->
+            </div><!-- / col-sm-6 -->
+            <!-- / tabbed accordions -->
+        </div><!-- / row -->
+
+        <div class="space-20">&nbsp;</div>
+    </div><!-- / container -->
+</div>
+
+<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+</html>
